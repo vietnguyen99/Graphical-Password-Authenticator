@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "822650088804",
+    "project_id": "passwordauthenticator",
+    "storage_bucket": "passwordauthenticator.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:822650088804:android:be79e33c9fa90bb5605e71",
+        "android_client_info": {
+          "package_name": "com.example.passwordauthenticator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "822650088804-ltjrkgq790h6kq8o72o2rlsaqbum5vnu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqyQKE376TUkdqa6QV-9aQJ0M4osuLjjI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "822650088804-ltjrkgq790h6kq8o72o2rlsaqbum5vnu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
