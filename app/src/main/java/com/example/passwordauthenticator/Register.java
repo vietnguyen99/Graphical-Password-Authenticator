@@ -46,6 +46,7 @@ public class Register extends AppCompatActivity {
     TextView text1;
     ToggleButton btnToggleDark;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -286,9 +287,11 @@ public class Register extends AppCompatActivity {
         });
         // On "Register" click, store color code string in Firestore using UserID, then load main page
         mRegisterBtn2.setOnClickListener(new View.OnClickListener() {
+
+
             @Override
             public void onClick(View view) {
-                FirebaseDatabase.getInstance().getReference().child("Users").child(FirebaseAuth.getInstance().getUid()).child("Level2Pin").setValue(text1.getText().toString()).
+                FirebaseDatabase.getInstance().getReference().child("users").child(FirebaseAuth.getInstance().getUid()).child("colorSequence").setValue(text1.getText().toString()).
                         addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {

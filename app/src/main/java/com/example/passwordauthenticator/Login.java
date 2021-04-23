@@ -197,19 +197,20 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                FirebaseDatabase.getInstance().getReference().child("Users").child(FirebaseAuth.getInstance().getUid())
+                FirebaseDatabase.getInstance().getReference().child("users").child(FirebaseAuth.getInstance().getUid())
                         .addValueEventListener(new ValueEventListener() {
                             @Override
                             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                                 if (dataSnapshot != null){
                                     Map<String , Object> map = (HashMap<String, Object>)dataSnapshot.getValue();
                                     if (map != null){
-                                        if (text1.getText().toString().equals(map.get("Level2Pin"))){
-                                            Toast.makeText(Login.this, "Ok", Toast.LENGTH_SHORT).show();
+                                        if (text1.getText().toString().equals(map.get("colorSequence"))){
+                                            Toast.makeText(Login.this, "You logged in", Toast.LENGTH_SHORT).show();
+                                            startActivity(new Intent(getApplicationContext(),MainActivity.class));
                                         }
                                         else {
                                             Toast.makeText(Login.this, "Wrong Pin", Toast.LENGTH_SHORT).show();
-                                            text1.setText("");
+                                            text1.setText("Color Input: ");
                                         }
                                     }
                                 }
